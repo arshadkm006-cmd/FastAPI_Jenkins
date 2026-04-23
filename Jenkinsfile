@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        VENV = "C:\Users\hp\PycharmProjects\testingproject\venv"
+        VENV = "C:\\Users\\hp\\PycharmProjects\\testingproject\\venv"
     }
 
     stages {

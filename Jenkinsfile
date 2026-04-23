@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        VENV = "C:\\Users\\hp\\PycharmProjects\\testingproject\\venv"
+        VENV = "venv"
     }
 
     stages {
@@ -26,12 +26,12 @@ pipeline {
         }
 
         stage('Run App') {
-            steps {
-                bat """
+         steps {
+            bat """
                 call %VENV%\\Scripts\\activate
-                start /B uvicorn app:app --host 127.0.0.1 --port 8000
-                """
-            }
-        }
+                uvicorn app:app --host 127.0.0.1 --port 8000
+            """
+    }
+}
     }
 }
